@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <div class="container">
+      <h2>Tetris Bot</h2>
+      <canvas id="canvas"></canvas>
+      <div class="values-container">
+        <p>Moves: <span id="movesLabel"></span></p>
+        <p>Depth: <span id="depthLabel"></span></p>
+        <p>Board fitness: <span id="fitnessLabel"></span></p>
+        <div class="input-container">
+          <span>Delay:</span>
+          <input id="delayInput" type="number" placeholder="Delay" min="10" max="10000" step="10" value="500">
+        </div>
+        <div class="input-container">
+          <span>Seed:</span>
+          <input id="seedInput" type="number" placeholder="Seed" min="0" max="100000000" step="1" value="0">
+        </div>
+        <button id="toggleModeBtn"></button>
+      </div>
+    </div>
+  </body>
+</html>
