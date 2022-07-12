@@ -19,7 +19,7 @@ Run: `yarn start`
 
 Simulates near possible movements, calculate the score of each and chooses the best based on score.
 
-The depth of the search is based on "how good" the board currently is(highest block Y). Currently, if left 8 blocks on Y to reach the top of the board, depth=3, if greater than 16, depth=2, else depth=1. These values are arbitrary.
+The depth of the search is based on "how good" the board currently is(highest block Y). Currently, if left 8 blocks on Y to reach the top of the board, depth=3, if greater than 8, depth=2, if greater than 16, depth=1. These values are arbitrary.
 
 The score/fitness of a board is calculated in the following way:
 
