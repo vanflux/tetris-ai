@@ -132,6 +132,9 @@ class Board {
         this.checkCompletedLines(this.fallingPiece.y, height);
         this.fallingPiece = undefined;
     }
+    setNextPieces(nextPieces) {
+        this.nextPieces = nextPieces;
+    }
     clone() {
         const newBoard = new Board(this.width, this.height, this.random, new Uint8Array(this.data));
         newBoard.fallingPiece = this.fallingPiece && { ...this.fallingPiece };

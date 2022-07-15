@@ -138,6 +138,10 @@ export class Board {
     this.fallingPiece = undefined;
   }
 
+  setNextPieces(nextPieces: PieceInfo[]) {
+    this.nextPieces = nextPieces;
+  }
+
   clone() {
     const newBoard = new Board(this.width, this.height, this.random, new Uint8Array(this.data));
     newBoard.fallingPiece = this.fallingPiece && {...this.fallingPiece};

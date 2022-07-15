@@ -25,5 +25,6 @@ export declare class Board {
     update(): void;
     ensureNextPieces(): void;
     putFallingPiece(): void;
+    setNextPieces(nextPieces: PieceInfo[]): void;
     clone(): Board;
 }
