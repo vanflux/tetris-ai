@@ -1,11 +1,6 @@
-import { Board } from "./board";
-import { BoardMoveCalculator } from "./board-move-calculator";
-import { BoardStatistics } from "./board-statistics";
-import { BoardView } from "./board-view";
-import { Bot } from "./bot";
-import { BoardFitness1 } from "./fitness/board-fitness-1";
-import { round, seedRandom, sleep } from "./utils";
 import '../public/styles.css';
+import { BoardView } from './board-view';
+import { Board, BoardFitness1, BoardMoveCalculator, BoardStatistics, Bot, round, seedRandom, sleep } from './lib';
 
 const canvas = document.getElementById('canvas') as HTMLCanvasElement;
 const delayInput = document.getElementById('delayInput') as HTMLInputElement;

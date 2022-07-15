@@ -1,7 +1,7 @@
 import { Board } from "./board";
 import { BoardMoveCalculator } from "./board-move-calculator";
 import { BoardStatistics } from "./board-statistics";
-import { IBoardFitness } from "./fitness/i-board-fitness";
+import { IBoardFitness } from "./fitness";
 
 export class Bot {
   constructor(

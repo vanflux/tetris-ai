@@ -1,5 +1,5 @@
-import { Board } from "./board";
-import { convertNumberToColor } from "./pieces";
+import { Board } from "./lib/board";
+import { convertNumberToColor } from "./lib/pieces";
 
 export class BoardView {
   private blockSize = 20;

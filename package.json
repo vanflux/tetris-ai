@@ -1,13 +1,14 @@
 {
   "name": "tetris-bot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "dependencies": {
     "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "npx tsc --project tsconfig.json"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
