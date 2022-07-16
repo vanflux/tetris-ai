@@ -71,7 +71,6 @@ class Board {
             return true;
         this.fallingPiece.y--;
         this.putFallingPiece();
-        this.spawnFallingPiece();
         return false;
     }
     checkColl() {
@@ -109,7 +108,9 @@ class Board {
         }
     }
     update() {
-        this.moveDown();
+        if (this.fallingPiece === undefined || !this.moveDown()) {
+            this.spawnFallingPiece();
+        }
     }
     ensureNextPieces() {
         if (this.nextPieces.length < pieces_1.pieces.length) {
