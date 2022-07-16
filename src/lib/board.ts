@@ -75,7 +75,6 @@ export class Board {
     if (!this.checkColl()) return true;
     this.fallingPiece.y--;
     this.putFallingPiece();
-    this.spawnFallingPiece();
     return false;
   }
 
@@ -112,7 +111,9 @@ export class Board {
   }
 
   update() {
-    this.moveDown();
+    if (this.fallingPiece === undefined || !this.moveDown()) {
+      this.spawnFallingPiece();
+    }
   }
 
   ensureNextPieces() {
