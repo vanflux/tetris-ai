@@ -1,2 +1,2 @@
-export { BoardFitness1 } from './board-fitness-1';
+export { BasicBoardFitness } from './basic-board-fitness';
 export { IBoardFitness } from './i-board-fitness';

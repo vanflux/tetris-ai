@@ -1,6 +1,7 @@
 import { Board } from "./board";
 import { BoardMoveCalculator } from "./board-move-calculator";
 import { BoardStatistics } from "./board-statistics";
+import { IDepthCalculator } from "./depth-calculator";
 import { IBoardFitness } from "./fitness";
 
 export class Bot {
@@ -8,19 +9,12 @@ export class Bot {
     private boardStatistics: BoardStatistics,
     private boardFitness: IBoardFitness,
     private boardMoveCalculator: BoardMoveCalculator,
+    private depthCalculator: IDepthCalculator,
   ) {}
 
   next(board: Board) {
-    let maxDepth: number;
     const statistics = this.boardStatistics.calculate(board);
-    if (statistics.minY >= 16) {
-      maxDepth = 1;
-    } else if (statistics.minY >= 8) {
-      maxDepth = 2;
-    } else {
-      maxDepth = 3;
-    }
-
+    const maxDepth = this.depthCalculator.calculate(board, statistics);
     const result = this.boardMoveCalculator.calculate(
       board,
       this.boardFitness,

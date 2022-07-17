@@ -1,6 +1,8 @@
 import '../public/styles.css';
 import { BoardView } from './board-view';
-import { Board, BoardFitness1, BoardMoveCalculator, BoardStatistics, Bot, round, seedRandom, sleep } from './lib';
+import { Board, BoardMoveCalculator, BoardStatistics, Bot, round, seedRandom, sleep } from './lib';
+import { BasicDepthCalculator } from './lib/depth-calculator';
+import { BasicBoardFitness } from './lib/fitness/basic-board-fitness';
 
 const canvas = document.getElementById('canvas') as HTMLCanvasElement;
 const delayInput = document.getElementById('delayInput') as HTMLInputElement;
@@ -49,8 +51,9 @@ function bot() {
   let board = new Board(10, 20, random);
   const bot = new Bot(
     new BoardStatistics(),
-    new BoardFitness1(),
+    new BasicBoardFitness(),
     new BoardMoveCalculator(),
+    new BasicDepthCalculator(),
   );
   
   let running = true;

@@ -1,3 +1,4 @@
+export * from './depth-calculator';
 export * from './fitness';
 export * from './board-move-calculator';
 export * from './board-statistics';
